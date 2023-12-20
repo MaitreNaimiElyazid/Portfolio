@@ -472,6 +472,11 @@ footer {
     color: #fffff2;
     margin-bottom: 20px;
 }
+.contact-info .contact-data i {
+    
+    color: rgb(100, 65, 0); /* Ajoutez cette ligne pour définir la couleur des icônes */
+}
+
 
 h1.boja-loga {
     color: #BEB395;
@@ -506,7 +511,16 @@ h1.boja-loga {
     border-top: 1px solid rgba(255, 255, 242, 0.3);
 }
 
+
+
+
+/*Au moins de   1024px*/    /*valider*/
+
 @media screen and (max-width: 1024px) {
+    .contact-info .contact-data i {
+    
+        color: rgb(100, 65, 0); /* Ajoutez cette ligne pour définir la couleur des icônes */
+    }
     header {
         padding: 0 50px;
     }
@@ -531,9 +545,43 @@ h1.boja-loga {
         padding-left: 50px;
         padding-right: 50px;
     }
+  /*la liste */
+  .usluge-navigacija-lista {
+    position: static;
+    display: none;
+    width: auto;
 }
 
+.navigation-item:hover .usluge-navigacija-lista {
+    display: block;
+    position: absolute;
+    background-color: #272C3F;
+    z-index: 100;
+    width: 100%;
+    left: 0;
+}
+
+.usluge-navigacija-lista li {
+    text-align: center;
+    width: 100%; /* Ajustez la largeur des liens pour occuper toute la largeur */
+    box-sizing: border-box;
+    margin: 5px 0; /* Ajoutez une marge de 5 pixels en haut et en bas */
+}
+
+
+
+}
+
+
+/*Au moins de  768px*/     /*Valider*/
+
+
 @media screen and (max-width: 768px) {
+
+    .contact-info .contact-data i {
+    
+        color: rgb(100, 65, 0); /* Ajoutez cette ligne pour définir la couleur des icônes */
+    }
     header {
         padding: 0;
     }
@@ -616,9 +664,43 @@ h1.boja-loga {
     }
 
 
+    /*la liste*/
+    .usluge-navigacija-lista {
+        position: static;
+        display: none;
+        width: auto;
+    }
+
+    .navigation-item:hover .usluge-navigacija-lista {
+        display: block;
+        position: absolute;
+        background-color: #272C3F;
+        z-index: 100;
+        width: 100%;
+        left: 0;
+    }
+
+    .usluge-navigacija-lista li {
+        text-align: center;
+        width: 100%; /* Ajustez la largeur des liens pour occuper toute la largeur */
+        box-sizing: border-box;
+        margin: 5px 0; /* Ajoutez une marge de 5 pixels en haut et en bas */
+    }
+
+
 }
 
+
+/*Au moins de  500px*/        /*Valide*/
+
 @media screen and (max-width: 500px) {
+
+
+
+    .contact-info .contact-data i {
+    
+        color: rgb(100, 65, 0); /* Ajoutez cette ligne pour définir la couleur des icônes */
+    }
     .contact-info {
         margin: 0 20px;
     }
@@ -658,30 +740,95 @@ h1.boja-loga {
     .footer-info {
         padding: 20px;
     }
+    
 }
+
+
+
 
 .open {
     left: 0;
 }
 
+
+         /* Regler Iciiiiii*/
 @media screen and (max-width: 400px) {
-    .contact-info {
-        flex-direction: column;
+    
+    
+    
+    
+    .contact-info .contact-data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 2.5cm; /* Ajoutez la hauteur souhaitée en pixels */
+    }
+    .contact-info .contact-data i {
+        font-size: 16px; /* Ajoutez la taille souhaitée en pixels */
+        margin-right: 12px; /* Ajoutez un espacement entre l'icône et le texte si nécessaire */
+      /* Ajustez cette valeur pour réduire la hauteur entre l'icône et le numéro */
+        color: rgb(100, 65, 0); /* Ajoutez cette ligne pour définir la couleur des icônes */
+    }
+    .contact-info .contact-data i.fa-mobile {
+        margin-top: 35px; /* Ajustez cette valeur pour déplacer l'icône vers le bas */
     }
 
-    .contact-data {
-        border: none;
-        text-align: center;
-        margin: 5px 0;
+   
+
+
+
+  /*contact*/
+
+    .kontakt-section {
+        padding: 50px 10px; /* Ajustez le rembourrage pour les écrans plus petits */
+        
     }
 
-    .contact-data i {
-        display: none;
+    .kontakt-text {
+        text-align: center; /* Ajustez l'alignement du texte selon vos préférences */
     }
+
+    .kontakt-text h1 {
+        font-size: 1.5rem; /* Ajustez la taille de la police pour les écrans plus petits */
+    }
+
+    .kontakt-forma form input,
+    .kontakt-forma form select,
+    .kontakt-forma form textarea {
+        width: 100%; /* Ajustez la largeur des champs de formulaire pour occuper toute la largeur */
+        
+    }
+    .kontakt-forma {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kontakt-forma form {
+    width: 80%; /* Ajustez la largeur du formulaire comme vous le souhaitez */
+}
+    
+    
+
+    .contact-info .contact-data span {
+        font-size: 15.1px; 
+
+        color: rgb(252, 252, 252);
+        font-weight: bold; /* Ajoutez cette ligne pour rendre le texte en gras */
+    }
+    
+
+
+    
+
+
+
+    
 
 
     .pocetna-text {
         padding-right: 20px;
+       margin-bottom: -340px;
     }
 
     .pocetna-text h1 {
@@ -727,6 +874,7 @@ h1.boja-loga {
         padding: 10px;
     }
 
+
     .kontakt-forma form textarea {
         font-size: 0.8rem;
         padding: 10px;
@@ -739,7 +887,44 @@ h1.boja-loga {
     .naslov {
         font-size: 2rem;
     }
+    body {
+        overflow-x: hidden;
+    }
+/* la liste */
+/* la liste */
+/* la liste */
+.usluge-navigacija-lista {
+    position: static;
+    display: none;
+    width: auto;
 }
+
+.navigation-item.usluge-item:hover .usluge-navigacija-lista {
+    display: block;
+    position: absolute;
+    background-color: #272C3F;
+    z-index: 100;
+    width: 100%;
+    left: 0;
+    bottom: 100%; /* Modifiez cette ligne pour placer la liste déroulante en haut */
+}
+
+.usluge-navigacija-lista li {
+    text-align: center;
+    width: 100%; /* Ajustez la largeur des liens pour occuper toute la largeur */
+    box-sizing: border-box;
+    margin: 5px 0; /* Ajoutez une marge de 5 pixels en haut et en bas */
+}
+
+
+
+
+}  
+
+
+
+
+
 .whatsapp-link {
     position: relative;
     display: flex;
