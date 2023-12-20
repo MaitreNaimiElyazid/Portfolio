@@ -166,7 +166,7 @@ header {
 
 .pocetna-section {
     height: 100vh;
-    background: linear-gradient(to right, rgba(39, 44, 63, 0.8), rgba(39, 44, 63, 0.8)), url('img/pozadina-pocetna.jpg') center no-repeat;
+    background: linear-gradient(to right, rgba(18, 21, 31, 0.8), rgba(4, 5, 7, 0.8)), url('img/pozadina-pocetna.jpg') center no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -179,15 +179,14 @@ header {
 .pocetna-text p {
     font-size: 1.5rem;
     font-weight: 100;
-    color: #fffff2;
+    color: #b3b39f;
 }
 
 .pocetna-text h1 {
-    font-family: 'IM Fell French Canon SC', sans-serif;
-    font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;    font-size: 3rem;
     font-weight: 300;
     line-height: 1.4;
-    color: #fffff2;
+    color: #f0d384;
     margin-top: 30px;
 }
 
@@ -741,3 +740,16 @@ h1.boja-loga {
         font-size: 2rem;
     }
 }
+.whatsapp-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #4CAF50; /* Couleur verte */
+  
+  }
+  
+  .whatsapp-link i {
+    color: #4CAF50; /* Couleur verte */
+    margin-right: 5px; /* Espace à droite de l'icône */
+    margin-bottom: -2px; /* Ajustement vertical vers le bas */
+  }
