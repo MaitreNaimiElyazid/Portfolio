@@ -757,21 +757,27 @@ h1.boja-loga {
     
     
     
-    .contact-info .contact-data {
+    .contact-info {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around; /* Ajustez selon vos préférences */
         align-items: center;
-        height: 2.5cm; /* Ajoutez la hauteur souhaitée en pixels */
     }
-    .contact-info .contact-data i {
-        font-size: 16px; /* Ajoutez la taille souhaitée en pixels */
-        margin-right: 12px; /* Ajoutez un espacement entre l'icône et le texte si nécessaire */
-      /* Ajustez cette valeur pour réduire la hauteur entre l'icône et le numéro */
-        color: rgb(100, 65, 0); /* Ajoutez cette ligne pour définir la couleur des icônes */
+    
+    .contact-data {
+        display: flex;
+        justify-content: space-between; /* Ajustez pour aligner vers la droite et la gauche */
+        text-align: right; /* Aligner le texte vers la droite */
     }
-    .contact-info .contact-data i.fa-mobile {
-        margin-top: 35px; /* Ajustez cette valeur pour déplacer l'icône vers le bas */
+    
+    .contact-data i {
+        font-size: 24px; /* Ajustez la taille de l'icône selon vos préférences */
+        margin-left: 10px; /* Ajoutez une marge à gauche de l'icône si nécessaire */
     }
+    
+    .contact-data span {
+        font-size: 16px; /* Ajustez la taille du texte selon vos préférences */
+    }
+    
 
    
 
@@ -784,9 +790,7 @@ h1.boja-loga {
         
     }
 
-    .kontakt-text {
-        text-align: center; /* Ajustez l'alignement du texte selon vos préférences */
-    }
+   
 
     .kontakt-text h1 {
         font-size: 1.5rem; /* Ajustez la taille de la police pour les écrans plus petits */
@@ -897,6 +901,8 @@ h1.boja-loga {
     position: static;
     display: none;
     width: auto;
+    max-height: 200px; /* Set your desired maximum height */
+    overflow-y: auto; /* Add scrollbar when content exceeds max height */
 }
 
 .navigation-item.usluge-item:hover .usluge-navigacija-lista {
@@ -906,15 +912,30 @@ h1.boja-loga {
     z-index: 100;
     width: 100%;
     left: 0;
-    bottom: 100%; /* Modifiez cette ligne pour placer la liste déroulante en haut */
+    bottom: 100%;
+    overflow-y: auto; /* Add scrollbar to the dropdown */
 }
 
 .usluge-navigacija-lista li {
     text-align: center;
-    width: 100%; /* Ajustez la largeur des liens pour occuper toute la largeur */
+    width: 100%;
     box-sizing: border-box;
-    margin: 5px 0; /* Ajoutez une marge de 5 pixels en haut et en bas */
+    margin: 5px 0;
+    border-bottom: 1px solid #fff;
+    color: #add8e6; /* Set text color to light blue by default */
+    transition: color 0.3s; /* Add a smooth transition effect for color changes */
 }
+
+.usluge-navigacija-lista li:hover {
+    color: #ffd700; /* Change text color to yellow when hovering */
+}
+
+/* Remove the border from the last li to avoid an extra line at the bottom */
+.usluge-navigacija-lista li:last-child {
+    border-bottom: none;
+}
+
+
 
 
 
@@ -938,3 +959,7 @@ h1.boja-loga {
     margin-right: 5px; /* Espace à droite de l'icône */
     margin-bottom: -2px; /* Ajustement vertical vers le bas */
   }
+
+  .map {
+    float: right; /* ou utilise margin-left: auto; pour déplacer vers la droite */
+}
