@@ -773,8 +773,10 @@ width: 80%; /* Ajustez la largeur du formulaire comme vous le souhaitez */
 
 
 
+
 .contact-info .contact-data span {
     font-size: 15.1px; 
+    color: wheat !important; /* Ajoute !important pour forcer l'application de la couleur */
 
     color: rgb(252, 252, 252);
     font-weight: bold; /* Ajoutez cette ligne pour rendre le texte en gras */
@@ -928,11 +930,14 @@ border-bottom: none;
         font-size: 24px;
         margin-left: 10px;
     }
+  
     
     /* Ajustements pour le texte dans la section contact-data */
     .contact-data span {
         font-size: 16px;
         font-weight: bold;
+        color: wheat !important; /* Ajoute !important pour forcer l'application de la couleur */
+
         color: rgb(252, 252, 252);
     }
 
