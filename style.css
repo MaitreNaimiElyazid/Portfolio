@@ -770,11 +770,18 @@ align-items: center;
 .kontakt-forma form {
 width: 80%; /* Ajustez la largeur du formulaire comme vous le souhaitez */
 }
+.contact-data span {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(252, 252, 252) !important; /* Ajoute !important pour forcer l'application de la couleur */
+    user-select: none; /* Empêche la sélection du texte */
+    cursor: default; /* Change le curseur pour indiquer qu'il n'est pas cliquable */
+}
 
 
 
 
-.contact-info .contact-data span {
+.contact-info {
     font-size: 15.1px; 
     color: wheat !important; /* Ajoute !important pour forcer l'application de la couleur */
 
@@ -936,8 +943,8 @@ border-bottom: none;
     .contact-data span {
         font-size: 16px;
         font-weight: bold;
-        color: wheat !important; /* Ajoute !important pour forcer l'application de la couleur */
-
+        user-select: none; /* Empêche la sélection du texte */
+        cursor: default; 
         color: rgb(252, 252, 252);
     }
 
