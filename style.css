@@ -932,10 +932,12 @@ border-bottom: none;
     /* Ajustements pour le texte dans la section contact-data */
     .contact-data span {
         font-size: 16px;
+        font-weight: bold;
+        color: rgb(252, 252, 252);
     }
 
     /* Styles spécifiques pour le texte dans la section contact-info */
-    .contact-info .contact-data span {
+    .contact-info {
         font-size: 15.1px;
         color: rgb(252, 252, 252);
         font-weight: bold;
