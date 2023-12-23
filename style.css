@@ -694,13 +694,29 @@ h1.boja-loga {
 /*Au moins de  500px*/        /*Valide*/
 
 @media screen and (max-width: 450px) {
-
+    .contact-data span {
+        font-size: 16px;
+        font-weight: bold;
+        color: rgb(252, 252, 252) !important; /* Ajoute !important pour forcer l'application de la couleur */
+    }
+    
+    .contact-info {
+        font-size: 15.1px; 
+        color: wheat !important; /* Ajoute !important pour forcer l'application de la couleur */
+    
+        color: rgb(252, 252, 252);
+        font-weight: bold; /* Ajoutez cette ligne pour rendre le texte en gras */
+    }
+    
 
 
     .contact-info .contact-data i {
     
         color: rgb(100, 65, 0); /* Ajoutez cette ligne pour définir la couleur des icônes */
     }
+
+
+    
     .contact-info {
         margin: 0 20px;
     }
@@ -770,22 +786,9 @@ align-items: center;
 .kontakt-forma form {
 width: 80%; /* Ajustez la largeur du formulaire comme vous le souhaitez */
 }
-.contact-data span {
-    font-size: 16px;
-    font-weight: bold;
-    color: rgb(252, 252, 252) !important; /* Ajoute !important pour forcer l'application de la couleur */
-}
 
 
 
-
-.contact-info {
-    font-size: 15.1px; 
-    color: wheat !important; /* Ajoute !important pour forcer l'application de la couleur */
-
-    color: rgb(252, 252, 252);
-    font-weight: bold; /* Ajoutez cette ligne pour rendre le texte en gras */
-}
 
 
 
@@ -918,16 +921,12 @@ border-bottom: none;
     
     /* Alignement de la section contact-info */
     .contact-info {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        width: 100%;
+        margin: 0;
     }
-    
-    /* Ajustements pour la section contact-data */
+
     .contact-data {
-        display: flex;
-        justify-content: space-between;
-        text-align: right;
+        margin: 0;
     }
     
     /* Styles pour les icônes dans la section contact-data */
