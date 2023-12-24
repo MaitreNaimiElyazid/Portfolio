@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Noto+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 
+
+ 
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -1074,5 +1080,5 @@ border-bottom: none;
   }
 
   .map {
-    float: right; /* ou utilise margin-left: auto; pour déplacer vers la droite */
+    float: left;
 }
