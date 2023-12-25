@@ -13,6 +13,7 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
@@ -105,23 +106,23 @@ header {
 .navigation-item.usluge-item .navigation-link {
     pointer-events: none;
 }
-
 .usluge-navigacija-lista {
     position: absolute;
     top: 20px;
     left: 0;
     background-color: #2b2b2c;
-    width: 200px;
+    width: 300px; /* Ajustez la largeur selon vos besoins */
     height: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    transition: .5s ease;
+    transition: .7s ease;
     overflow: hidden;
+    overflow-y: scroll; /* Ajoute la barre de défilement verticale si nécessaire */
 }
 
 .navigation-item.usluge-item:hover .usluge-navigacija-lista {
-    height: 300px;
+    height: 400px;
 }
 
 .usluge-navigacija-lista li:first-child {
@@ -130,10 +131,11 @@ header {
 
 .usluge-navigacija-lista li {
     padding: 0 20px;
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
 }
 
 .usluge-navigacija-lista li a {
-    font-weight: 300;
+    font-weight: 700;
     color: #ffffff;
 }
 
@@ -392,16 +394,15 @@ header {
     font-size: 2.5rem;
     font-weight: 300;
     margin-bottom: 20px;
-    color: #fffff2;
+    color: #ffffff; /* Correction: 'ffffff' au lieu de 'fffff2' */
 }
 
 .kontakt-text p {
     font-weight: 300;
     font-size: 1.1rem;
     margin-bottom: 20px;
-    color: #fffff2;
+    color: #ffffff; /* Correction: 'ffffff' au lieu de 'fffff2' */
 }
-
 .kontakt-forma form {
     display: flex;
     flex-direction: column;
@@ -521,26 +522,20 @@ h1.boja-loga {
 
 
 /*Au moins de   1024px*/    /*valider*/
-
 @media screen and (max-width: 1024px) {
+
     .contact-info .contact-data i {
-    
-        color: rgb(100, 65, 0); /* Ajoutez cette ligne pour définir la couleur des icônes */
+        color: rgb(100, 65, 0);
     }
+
     header {
         padding: 0 50px;
     }
 
-    .usluge-section {
-        padding: 150px 50px;
-    }
-
-    .o-nama-section {
-        padding: 150px 50px;
-    }
-
+    .usluge-section,
+    .o-nama-section,
     .kontakt-section {
-        padding: 150px 50px;
+        padding: 150px 30px; /* Ajustez la marge intérieure selon vos besoins */
     }
 
     .usluga p {
@@ -551,43 +546,58 @@ h1.boja-loga {
         padding-left: 50px;
         padding-right: 50px;
     }
-  /*la liste */
-  .usluge-navigacija-lista {
-    position: static;
-    display: none;
-    width: auto;
+
+    /* La liste */
+    
+.usluge-navigacija-lista {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    background-color: #2b2b2c;
+    width: 300px; /* Ajustez la largeur selon vos besoins */
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: .7s ease;
+    overflow: hidden;
+    overflow-y: scroll; /* Ajoute la barre de défilement verticale si nécessaire */
 }
 
-.navigation-item:hover .usluge-navigacija-lista {
-    display: block;
-    position: absolute;
-    background-color: #272C3F;
-    z-index: 100;
-    width: 100%;
-    left: 0;
+.navigation-item.usluge-item:hover .usluge-navigacija-lista {
+    height: 400px;
+}
+
+.usluge-navigacija-lista li:first-child {
+    padding-top: 20px;
 }
 
 .usluge-navigacija-lista li {
-    text-align: center;
-    width: 100%; /* Ajustez la largeur des liens pour occuper toute la largeur */
-    box-sizing: border-box;
-    margin: 5px 0; /* Ajoutez une marge de 5 pixels en haut et en bas */
+    padding: 0 20px;
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
 }
 
+.usluge-navigacija-lista li a {
+    font-weight: 700;
+    color: #ffffff;
+}
 
+.usluge-navigacija-lista li a:hover {
+    color: #f0b105;
+    transition: .5s ease;
+}
 
 }
+
 
 
 /*Au moins de  768px*/     /*Valider*/
-
-
 @media screen and (max-width: 768px) {
 
     .contact-info .contact-data i {
-    
-        color: rgb(100, 65, 0); /* Ajoutez cette ligne pour définir la couleur des icônes */
+        color: rgb(100, 65, 0);
     }
+
     header {
         padding: 0;
     }
@@ -595,7 +605,6 @@ h1.boja-loga {
     .contact-data span {
         font-size: 0.9rem;
     }
-
 
     .navigation-list {
         position: absolute;
@@ -609,7 +618,6 @@ h1.boja-loga {
         padding-top: 50px;
         z-index: 100;
     }
-
 
     .navigation-item.logo {
         display: none;
@@ -630,6 +638,8 @@ h1.boja-loga {
 
     .usluge-navigacija-lista {
         left: -100%;
+        margin-top: 10px; /* Ajoute un espace en haut */
+        margin-bottom: 10px; /* Ajoute un espace en bas */
     }
 
     .toggle {
@@ -653,6 +663,8 @@ h1.boja-loga {
     .pozovite-nas-section {
         display: flex;
         flex-direction: column;
+        margin-top: 20px; /* Ajoute un espace en haut */
+        margin-bottom: 20px; /* Ajoute un espace en bas */
     }
 
     .kontakt-section {
@@ -669,17 +681,18 @@ h1.boja-loga {
         row-gap: 50px;
     }
 
-
-    /*la liste*/
+    /* La liste */
     .usluge-navigacija-lista {
         position: static;
         display: none;
         width: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     .navigation-item:hover .usluge-navigacija-lista {
         display: block;
-        position: absolute;
+        position: relative;
         background-color: #272C3F;
         z-index: 100;
         width: 100%;
@@ -688,48 +701,40 @@ h1.boja-loga {
 
     .usluge-navigacija-lista li {
         text-align: center;
-        width: 100%; /* Ajustez la largeur des liens pour occuper toute la largeur */
+        width: 100%;
         box-sizing: border-box;
-        margin: 5px 0; /* Ajoutez une marge de 5 pixels en haut et en bas */
+        margin: 5px 0;
+        white-space: nowrap;
     }
-
-
 }
 
 
-/*Au moins de  500px*/        /*Valide*/
 
+
+/*Au moins de  500px*/        /*Valide*/
 @media screen and (max-width: 450px) {
     .contact-data span {
         font-size: 16px;
         font-weight: bold;
-        color: rgb(252, 252, 252) !important; /* Ajoute !important pour forcer l'application de la couleur */
+        color: rgb(252, 252, 252) !important;
+        margin: 5px 0; /* Ajoute de l'espace en haut et en bas */
     }
-    
-    .contact-info {
-        font-size: 15.1px; 
-        color: wheat !important; /* Ajoute !important pour forcer l'application de la couleur */
-    
-        color: rgb(252, 252, 252);
-        font-weight: bold; /* Ajoutez cette ligne pour rendre le texte en gras */
-    }
-    
 
+    .contact-info {
+        font-size: 15.1px;
+        color: rgb(252, 252, 252);
+        font-weight: bold;
+        margin: 0 20px;
+    }
 
     .contact-info .contact-data i {
-    
-        color: rgb(100, 65, 0); /* Ajoutez cette ligne pour définir la couleur des icônes */
-    }
-
-
-    
-    .contact-info {
-        margin: 0 20px;
+        color: rgb(100, 65, 0);
     }
 
     .contact-data {
         display: flex;
         flex-direction: column;
+        margin-top: 10px; /* Ajoute de l'espace en haut */
     }
 
     .contact-data i {
@@ -763,160 +768,138 @@ h1.boja-loga {
         padding: 20px;
     }
 
+    /* Contact */
 
- /*contact*/
+    .kontakt-section {
+        padding: 50px 10px;
+    }
 
- .kontakt-section {
-    padding: 50px 10px; /* Ajustez le rembourrage pour les écrans plus petits */
-    
-}
+    .kontakt-text h1 {
+        font-size: 1.5rem;
+    }
 
+    .kontakt-forma form input,
+    .kontakt-forma form select,
+    .kontakt-forma form textarea {
+        width: 100%;
+    }
 
+    .kontakt-forma {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.kontakt-text h1 {
-    font-size: 1.5rem; /* Ajustez la taille de la police pour les écrans plus petits */
-}
+    .kontakt-forma form {
+        width: 80%;
+    }
 
-.kontakt-forma form input,
-.kontakt-forma form select,
-.kontakt-forma form textarea {
-    width: 100%; /* Ajustez la largeur des champs de formulaire pour occuper toute la largeur */
-    
-}
-.kontakt-forma {
-display: flex;
-justify-content: center;
-align-items: center;
-}
+    .pocetna-text {
+        padding-right: 20px;
+        margin-bottom: -340px;
+    }
 
-.kontakt-forma form {
-width: 80%; /* Ajustez la largeur du formulaire comme vous le souhaitez */
-}
+    .pocetna-text h1 {
+        font-size: 2rem;
+    }
 
+    .dodatak {
+        flex-direction: column;
+    }
 
+    .usluge-section {
+        padding: 100px 20px;
+    }
 
+    .o-nama-section {
+        padding: 100px 20px;
+    }
 
+    .o-nama-slika {
+        width: 200px;
+    }
 
+    .kontakt-section {
+        padding: 100px 20px;
+        column-gap: 0;
+    }
 
+    .kontakt-text h1 {
+        font-size: 2rem;
+    }
 
+    .kontakt-text p {
+        font-size: 1rem;
+        padding-right: 20px;
+    }
 
+    .kontakt-forma form input {
+        font-size: 1rem;
+        padding: 10px;
+    }
 
+    .kontakt-forma form select {
+        padding: 10px;
+    }
 
+    .kontakt-forma form textarea {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
 
+    .kontakt-forma form textarea::placeholder {
+        font-size: 1rem;
+    }
 
-.pocetna-text {
-    padding-right: 20px;
-   margin-bottom: -340px;
-}
+    .naslov {
+        font-size: 2rem;
+    }
 
-.pocetna-text h1 {
-    font-size: 2rem;
-}
+    body {
+        overflow-x: hidden;
+    }
 
-.dodatak {
-    flex-direction: column;
-}
-
-.usluge-section {
-    padding: 100px 20px;
-}
-
-.o-nama-section {
-    padding: 100px 20px;
-}
-
-.o-nama-slika {
-    width: 200px;
-}
-
-.kontakt-section {
-    padding: 100px 20px;
-    column-gap: 0;
-}
-
-.kontakt-text h1 {
-    font-size: 2rem;
-}
-
-.kontakt-text p {
-    font-size: 1rem;
-    padding-right: 20px;
-}
-
-.kontakt-forma form input {
-    font-size: 1rem;
-    padding: 10px;
-}
-
-.kontakt-forma form select {
-    padding: 10px;
-}
-
-
-.kontakt-forma form textarea {
-    font-size: 0.8rem;
-    padding: 10px;
-}
-
-.kontakt-forma form textarea::placeholder {
-    font-size: 1rem;
-}
-
-.naslov {
-    font-size: 2rem;
-}
-body {
-    overflow-x: hidden;
-}
-
-/* la liste */
+    /* La liste */
+   
 .usluge-navigacija-lista {
-position: static;
-display: none;
-width: auto;
-max-height: 200px; /* Set your desired maximum height */
-overflow-y: auto; /* Add scrollbar when content exceeds max height */
+    position: absolute;
+    top: 20px;
+    left: 0;
+    background-color: #2b2b2c;
+    width: 300px; /* Ajustez la largeur selon vos besoins */
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: .7s ease;
+    overflow: hidden;
+    overflow-y: scroll; /* Ajoute la barre de défilement verticale si nécessaire */
 }
 
 .navigation-item.usluge-item:hover .usluge-navigacija-lista {
-display: block;
-position: absolute;
-background-color: #272C3F;
-z-index: 100;
-width: 100%;
-left: 0;
-bottom: 100%;
-overflow-y: auto; /* Add scrollbar to the dropdown */
+    height: 400px;
+}
+
+.usluge-navigacija-lista li:first-child {
+    padding-top: 20px;
 }
 
 .usluge-navigacija-lista li {
-text-align: center;
-width: 100%;
-box-sizing: border-box;
-margin: 5px 0;
-border-bottom: 1px solid #fff;
-color: #add8e6; /* Set text color to light blue by default */
-transition: color 0.3s; /* Add a smooth transition effect for color changes */
+    padding: 0 20px;
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
 }
 
-.usluge-navigacija-lista li:hover {
-color: #ffd700; /* Change text color to yellow when hovering */
+.usluge-navigacija-lista li a {
+    font-weight: 700;
+    color: #ffffff;
 }
 
-/* Remove the border from the last li to avoid an extra line at the bottom */
-.usluge-navigacija-lista li:last-child {
-border-bottom: none;
+.usluge-navigacija-lista li a:hover {
+    color: #f0b105;
+    transition: .5s ease;
 }
 
-
-
-
-
-
-    
 }
-
-
 
 
 .open {
@@ -937,6 +920,7 @@ border-bottom: none;
     
     /* Styles pour les icônes dans la section contact-data */
     .contact-data i {
+        margin-top: 10px;
         font-size: 24px;
         margin-left: 10px;
     }
@@ -1023,42 +1007,49 @@ border-bottom: none;
     }
 
     /* Styles pour la liste usluge-navigacija-lista */
+ 
+
+   
+
     .usluge-navigacija-lista {
-        position: static;
-        display: none;
-        width: auto;
-        max-height: 200px;
-        overflow-y: auto;
-    }
-
-    .navigation-item.usluge-item:hover .usluge-navigacija-lista {
-        display: block;
         position: absolute;
-        background-color: #272C3F;
-        z-index: 100;
-        width: 100%;
+        top: 20px;
         left: 0;
-        bottom: 100%;
-        overflow-y: auto;
+        background-color: #2b2b2c;
+        width: 300px; /* Ajustez la largeur selon vos besoins */
+        height: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        transition: .7s ease;
+        overflow: hidden;
+        overflow-y: scroll; /* Ajoute la barre de défilement verticale si nécessaire */
     }
+    
+    .navigation-item.usluge-item:hover .usluge-navigacija-lista {
+        height: 600px;
 
+    }
+    
+    .usluge-navigacija-lista li:first-child {
+        padding-top: 20px;
+    }
+    
     .usluge-navigacija-lista li {
-        text-align: center;
-        width: 100%;
-        box-sizing: border-box;
-        margin: 5px 0;
-        border-bottom: 1px solid #fff;
-        color: #add8e6;
-        transition: color 0.3s;
+        padding: 0 20px;
+        white-space: nowrap; /* Empêche le texte de passer à la ligne */
     }
-
-    .usluge-navigacija-lista li:hover {
-        color: #ffd700;
+    
+    .usluge-navigacija-lista li a {
+        font-weight: 700;
+        color: #ffffff;
     }
-
-    .usluge-navigacija-lista li:last-child {
-        border-bottom: none;
+    
+    .usluge-navigacija-lista li a:hover {
+        color: #f0b105;
+        transition: .5s ease;
     }
+    
 }
 
 
